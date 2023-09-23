@@ -56,7 +56,7 @@ export default /**
         // Define a percentage-based discount
         value: {
           percentage: {
-            value: '10.0',
+            value: '15.0',
           },
         },
       },
