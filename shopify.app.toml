@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "test-order-discounts"
+client_id = "d7304897ea95ca1e63fbf3d1d1cb7840"
+application_url = "https://mothers-ht-entries-brief.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://mothers-ht-entries-brief.trycloudflare.com/auth/callback",
+  "https://mothers-ht-entries-brief.trycloudflare.com/auth/shopify/callback",
+  "https://mothers-ht-entries-brief.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "jameshagood.myshopify.com"
