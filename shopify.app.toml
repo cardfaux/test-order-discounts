@@ -2,7 +2,7 @@
 
 name = "test-order-discounts"
 client_id = "d7304897ea95ca1e63fbf3d1d1cb7840"
-application_url = "https://mothers-ht-entries-brief.trycloudflare.com"
+application_url = "https://exercise-meters-ff-declaration.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products, write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://mothers-ht-entries-brief.trycloudflare.com/auth/callback",
-  "https://mothers-ht-entries-brief.trycloudflare.com/auth/shopify/callback",
-  "https://mothers-ht-entries-brief.trycloudflare.com/api/auth/callback"
+  "https://exercise-meters-ff-declaration.trycloudflare.com/auth/callback",
+  "https://exercise-meters-ff-declaration.trycloudflare.com/auth/shopify/callback",
+  "https://exercise-meters-ff-declaration.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -23,12 +23,20 @@ export default /**
  * @returns {FunctionResult}
  */
 (input) => {
+  const HAS_TAG = input?.cart?.buyerIdentity?.customer?.hasAnyTag;
+  if (!HAS_TAG) {
+    console.error('Customer does not have the tag required for this discount.');
+    return EMPTY_DISCOUNT;
+  } else if (HAS_TAG) {
+    console.error('Customer has the tag and will get the discount');
+  }
+
   const targets = input.cart.lines
     // Only include cart lines with a quantity of two or more
     // and a targetable product variant
     .filter(
       (line) =>
-        line.quantity >= 2 && line.merchandise.__typename == 'ProductVariant'
+        line.quantity >= 1 && line.merchandise.__typename == 'ProductVariant'
     )
     .map((line) => {
       const variant = /** @type {ProductVariant} */ (line.merchandise);
